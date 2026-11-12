@@ -1,6 +1,6 @@
 # Madden Vehicle Services website
 
-Static website for https://maddenvehicleservices.co.uk, hosted on Cloudflare Pages.
+Static website for https://maddenvehicleservices.co.uk, hosted on Cloudflare.
 
 ## Folder layout
 
@@ -10,14 +10,16 @@ Static website for https://maddenvehicleservices.co.uk, hosted on Cloudflare Pag
   - `sitemap.xml`, `robots.txt`, `_headers` (Cloudflare security/caching headers)
 - `.claude/` – local preview tools (not published)
 
-## Cloudflare Pages settings
+## Cloudflare settings
+
+The site is deployed as a Cloudflare Worker with static assets, configured in `wrangler.jsonc`
+(serves `public/`, clean URLs, `404.html` for unknown pages; `public/_headers` sets headers).
 
 | Setting | Value |
 | --- | --- |
 | Production branch | `main` |
-| Framework preset | None |
 | Build command | *(leave empty)* |
-| Build output directory | `public` |
+| Deploy command | `npx wrangler deploy` |
 
 ## Making changes
 

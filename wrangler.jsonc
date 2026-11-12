@@ -1,0 +1,12 @@
+// Cloudflare Workers config: serves the static site in ./public
+{
+  "name": "madden-vehicle-services",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public",
+    // /about.html is served at /about (and .html URLs redirect there)
+    "html_handling": "auto-trailing-slash",
+    // Unknown URLs show public/404.html with a 404 status
+    "not_found_handling": "404-page"
+  }
+}
