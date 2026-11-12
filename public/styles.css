@@ -1,0 +1,122 @@
+:root {
+  --navy: #0f2a44;
+  --navy-dark: #0a1d30;
+  --orange: #f28c28;
+  --orange-dark: #d97514;
+  --text: #1f2933;
+  --muted: #5b6770;
+  --light: #f4f6f8;
+  --white: #ffffff;
+  --radius: 8px;
+  --max: 1100px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+a { color: var(--orange-dark); }
+a:hover { color: var(--navy); }
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+
+/* Header */
+.site-header { background: var(--navy); color: var(--white); position: sticky; top: 0; z-index: 10; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 14px 16px; max-width: var(--max); margin: 0 auto; }
+.logo { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.25rem; letter-spacing: .3px; }
+.logo span { color: var(--orange); }
+.main-nav ul { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+.main-nav a { color: var(--white); text-decoration: none; font-weight: 500; }
+.main-nav a:hover, .main-nav a[aria-current="page"] { color: var(--orange); }
+.nav-phone { background: var(--orange); color: var(--navy-dark) !important; padding: 8px 14px; border-radius: var(--radius); font-weight: 700 !important; }
+.nav-phone:hover { background: var(--white); }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--navy) 0%, #1d4670 100%); color: var(--white); padding: 72px 0 64px; }
+.hero h1 { font-size: clamp(1.9rem, 4.5vw, 2.9rem); line-height: 1.2; margin-bottom: 16px; max-width: 760px; }
+.hero p { font-size: 1.15rem; max-width: 640px; margin-bottom: 28px; color: #d8e2ec; }
+.page-hero { padding: 52px 0 44px; }
+
+.btn { display: inline-block; padding: 12px 22px; border-radius: var(--radius); font-weight: 700; text-decoration: none; margin: 0 10px 10px 0; }
+.btn-primary { background: var(--orange); color: var(--navy-dark); }
+.btn-primary:hover { background: var(--orange-dark); color: var(--white); }
+.btn-outline { border: 2px solid var(--white); color: var(--white); }
+.btn-outline:hover { background: var(--white); color: var(--navy); }
+
+/* Sections */
+section { padding: 56px 0; }
+.section-alt { background: var(--light); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--navy); margin-bottom: 14px; }
+h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 8px; }
+p + p { margin-top: 12px; }
+.lead { font-size: 1.1rem; color: var(--muted); max-width: 760px; margin-bottom: 28px; }
+
+.grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.card { background: var(--white); border: 1px solid #e3e8ed; border-radius: var(--radius); padding: 24px; box-shadow: 0 2px 6px rgba(15, 42, 68, .05); }
+.card .icon { font-size: 1.8rem; margin-bottom: 8px; }
+.card a { font-weight: 600; }
+
+.checklist { list-style: none; margin-top: 12px; }
+.checklist li { padding-left: 28px; position: relative; margin-bottom: 8px; }
+.checklist li::before { content: "✔"; position: absolute; left: 0; color: var(--orange-dark); font-weight: 700; }
+
+.cta-band { background: var(--orange); color: var(--navy-dark); text-align: center; padding: 44px 0; }
+.cta-band h2 { color: var(--navy-dark); }
+.cta-band .btn-primary { background: var(--navy); color: var(--white); }
+.cta-band .btn-primary:hover { background: var(--navy-dark); }
+
+.two-col { display: grid; gap: 32px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: start; }
+
+/* Contact */
+.contact-box { background: var(--navy); color: var(--white); border-radius: var(--radius); padding: 28px; }
+.contact-box h2, .contact-box h3 { color: var(--white); }
+.contact-box a { color: var(--orange); font-weight: 700; }
+.big-phone { font-size: 1.8rem; display: inline-block; margin: 6px 0 14px; }
+
+/* Policy pages */
+.policy h2 { margin-top: 32px; }
+.policy h3 { margin-top: 20px; }
+.policy ul { margin: 10px 0 10px 22px; }
+.policy table { width: 100%; border-collapse: collapse; margin: 14px 0; }
+.policy th, .policy td { border: 1px solid #dde3e8; padding: 10px; text-align: left; vertical-align: top; }
+.policy th { background: var(--light); }
+.table-wrap { overflow-x: auto; }
+
+/* Footer */
+.site-footer { background: var(--navy-dark); color: #c4d0db; padding: 44px 0 20px; font-size: .95rem; }
+.footer-grid { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.site-footer h2 { color: var(--white); font-size: 1.05rem; margin-bottom: 10px; }
+.site-footer ul { list-style: none; }
+.site-footer li { margin-bottom: 6px; }
+.site-footer a { color: #c4d0db; text-decoration: none; }
+.site-footer a:hover { color: var(--orange); }
+.footer-bottom { border-top: 1px solid #23415e; margin-top: 30px; padding-top: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+.footer-bottom nav a { margin-right: 16px; }
+
+/* Cookie banner */
+.cookie-banner { position: fixed; left: 16px; right: 16px; bottom: 16px; max-width: 720px; margin: 0 auto; background: var(--white); color: var(--text); border-radius: var(--radius); box-shadow: 0 6px 24px rgba(0,0,0,.25); padding: 18px 20px; display: none; z-index: 50; }
+.cookie-banner.show { display: block; }
+.cookie-banner p { margin-bottom: 12px; }
+.cookie-banner button { border: 0; cursor: pointer; font: inherit; }
+.btn-light { background: var(--light); color: var(--navy); }
+
+@media (max-width: 640px) {
+  .header-inner { justify-content: center; text-align: center; }
+  .main-nav ul { justify-content: center; gap: 14px; }
+  .hero { padding: 52px 0 44px; }
+}
+
+/* Photos */
+.family, .media-row { align-items: center; }
+.photo { margin: 0; text-align: center; }
+.photo img { width: 100%; max-width: 420px; height: auto; border-radius: var(--radius); box-shadow: 0 6px 20px rgba(15, 42, 68, .18); }
+.photo figcaption { margin-top: 10px; color: var(--muted); font-style: italic; }
+h2.spaced { margin-top: 48px; }
+.fb-icon { vertical-align: -2px; margin-right: 4px; }
+
+address { font-style: normal; }
